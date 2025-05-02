@@ -112,12 +112,12 @@ function Contact({ id }) {
             method="POST"
             data-netlify="true"
             netlify-honeypot="bot-field"
+            action="/success"
             onSubmit={handleSubmit}
           >
             {/* Hidden fields for Netlify Forms */}
             <input type="hidden" name="form-name" value="contact" />
             <input type="hidden" name="bot-field" />
-            <input type="hidden" name="recipient" value="brandomo.official@gmail.com" />
             <VStack spacing={6}>
               <FormControl isRequired>
                 <FormLabel>Name</FormLabel>

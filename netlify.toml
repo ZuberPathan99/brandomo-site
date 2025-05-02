@@ -1,0 +1,12 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[forms]
+  [forms.contact]
+    name = "contact"
+
+[[redirects]]
+  from = "/success"
+  to = "/success.html"
+  status = 200
