@@ -66,9 +66,14 @@ function Footer() {
             <ListHeader>Contact Info</ListHeader>
             <Text>brandomo.official@gmail.com</Text>
             <Text>+91 9579171844</Text>
+            <Text>+91 91127 30101</Text>
 
             <Stack direction="row" spacing={4} mt={4}>
               <IconButton
+                as="a"
+                href="https://x.com/Brandomo99"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Twitter"
                 icon={<FaTwitter />}
                 size="md"
@@ -89,6 +94,10 @@ function Footer() {
                 _hover={{ bg: "whiteAlpha.200" }}
               />
               <IconButton
+                as="a"
+                href="https://www.instagram.com/brandomo.official?igsh=NnNyeWt3Z212NnN2&utm_source=qr"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 icon={<FaInstagram />}
                 size="md"
@@ -97,6 +106,10 @@ function Footer() {
                 _hover={{ bg: "whiteAlpha.200" }}
               />
               <IconButton
+                as="a"
+                href="https://www.linkedin.com/company/107283196/"
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="LinkedIn"
                 icon={<FaLinkedin />}
                 size="md"

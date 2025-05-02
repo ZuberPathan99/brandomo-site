@@ -1,5 +1,5 @@
 // components/Hero.jsx
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useRef } from 'react';
 import {
   Box,
   Container,
@@ -25,8 +25,6 @@ const MotionFlex = motion(Flex);
 
 function Hero() {
   const heroRef = useRef(null);
-  const videoRef = useRef(null);
-  const [videoLoaded, setVideoLoaded] = useState(false);
 
   const { scrollYProgress } = useScroll({
     target: heroRef,
@@ -35,32 +33,6 @@ function Hero() {
 
   const parallaxY = useTransform(scrollYProgress, [0, 1], [0, 300]);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
-
-  // Handle video autoplay after 5 seconds
-  useEffect(() => {
-    if (videoRef.current) {
-      // Add event listener for when video is loaded
-      videoRef.current.addEventListener('loadeddata', () => {
-        setVideoLoaded(true);
-      });
-
-      // Set up timer to play video after 5 seconds
-      const timer = setTimeout(() => {
-        if (videoRef.current && videoLoaded) {
-          videoRef.current.play().catch(e => console.log("Autoplay prevented:", e));
-        }
-      }, 5000);
-
-      return () => {
-        clearTimeout(timer);
-        if (videoRef.current) {
-          videoRef.current.removeEventListener('loadeddata', () => {
-            setVideoLoaded(true);
-          });
-        }
-      };
-    }
-  }, [videoLoaded]);
 
   const scrollToContact = () => {
     document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
@@ -249,8 +221,8 @@ function Hero() {
                 position="absolute"
                 top="5%"
                 right="10%"
-                w={{ base: "140px", md: "180px" }}
-                h={{ base: "180px", md: "240px" }}
+                w={{ base: "160px", md: "220px" }}
+                h={{ base: "240px", md: "320px" }}
                 borderRadius="3xl"
                 overflow="hidden"
                 shadow="lg"
@@ -270,52 +242,15 @@ function Hero() {
                   alt="Perfume product photography"
                   w="full"
                   h="full"
-                  objectFit="contain"
+                  objectFit="cover"
+                  objectPosition="top"
                   bg="white"
                   transition="transform 0.3s ease"
                   _hover={{ transform: "scale(1.05)" }}
                 />
               </MotionBox>
 
-              <MotionBox
-                position="absolute"
-                top="30%"
-                left="15%"
-                w={{ base: "180px", md: "240px" }}
-                h={{ base: "240px", md: "320px" }}
-                borderRadius="3xl"
-                overflow="hidden"
-                shadow="xl"
-                variants={fadeInUp}
-                animate={{
-                  y: [0, 15, 0],
-                  transition: {
-                    duration: 7,
-                    ease: "easeInOut",
-                    repeat: Infinity,
-                    delay: 1
-                  }
-                }}
-              >
-                <Box
-                  as="video"
-                  ref={videoRef}
-                  src="/perfume-video.mp4"
-                  w="full"
-                  h="full"
-                  objectFit="cover"
-                  borderRadius="3xl"
-                  muted
-                  loop
-                  playsInline
-                  sx={{
-                    '&:hover': {
-                      transform: 'scale(1.05)',
-                      transition: 'transform 0.3s ease'
-                    }
-                  }}
-                />
-              </MotionBox>
+              {/* Video box removed as requested */}
 
               {/* Floating badges */}
               <MotionBox
