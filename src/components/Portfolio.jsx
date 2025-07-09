@@ -98,15 +98,16 @@ const PortfolioItem = ({ item }) => {
                 objectFit="cover"
                 objectPosition={
                   item.title === "Luxury Perfume Campaign" ? "top" :
-                  item.title === "Luxury Watch Collection" ? "top" :
-                  item.title === "Premium Watch Photography" ? "top" :
-                  item.title === "Luxury Watch Poster" ? "center" : "center"
+                  item.title === "Product photoshoot" ? "center" :
+                  item.title === "perfume bottles photoshoot" ? "center" :
+                  item.title === "luxury perfume bottle photoshoot" ? "center" : "center"
                 }
                 transition="transform 0.5s ease"
                 _hover={{ transform: "scale(1.05)" }}
                 bg={
-                  item.title === "Premium Watch Photography" ? "gray.50" :
-                  item.title === "Luxury Watch Poster" ? "gray.100" : "gray.50"
+                  item.title === "perfume bottles photoshoot" ? "gray.50" :
+                  item.title === "Product photoshoot" ? "gray.50" :
+                  item.title === "luxury perfume bottle photoshoot" ? "gray.50" : "gray.50"
                 }
               />
             </Box>
@@ -228,18 +229,20 @@ const PortfolioItem = ({ item }) => {
                         width="100%"
                         height="100%"
                         objectFit={
-                          item.title === "Premium Watch Photography" ? "cover" :
-                          item.title === "Luxury Watch Poster" ? "contain" : "cover"
+                          item.title === "perfume bottles photoshoot" ? "cover" :
+                          item.title === "Product photoshoot" ? "cover" :
+                          item.title === "luxury perfume bottle photoshoot" ? "cover" : "cover"
                         }
                         objectPosition={
                           item.title === "Luxury Perfume Campaign" ? "top" :
-                          item.title === "Luxury Watch Collection" ? "top" :
-                          item.title === "Premium Watch Photography" ? "top" :
-                          item.title === "Luxury Watch Poster" ? "center" : "center"
+                          item.title === "Product photoshoot" ? "center" :
+                          item.title === "perfume bottles photoshoot" ? "center" :
+                          item.title === "luxury perfume bottle photoshoot" ? "center" : "center"
                         }
                         bg={
-                          item.title === "Premium Watch Photography" ? "gray.50" :
-                          item.title === "Luxury Watch Poster" ? "black" : "gray.50"
+                          item.title === "perfume bottles photoshoot" ? "gray.50" :
+                          item.title === "Product photoshoot" ? "gray.50" :
+                          item.title === "luxury perfume bottle photoshoot" ? "gray.50" : "gray.50"
                         }
                       />
                     </Box>
@@ -252,18 +255,18 @@ const PortfolioItem = ({ item }) => {
                 align="start"
                 p={6}
                 spacing={4}
-                bg={item.title === "Luxury Watch Poster" ? "black" : "white"}
+                bg={item.title === "Product photoshoot" || item.title === "luxury perfume bottle photoshoot" ? "white" : "white"}
               >
                 <Box>
                   <Heading
                     size="sm"
                     mb={2}
-                    color={item.title === "Luxury Watch Poster" ? "white" : "gray.700"}
+                    color={item.title === "Product photoshoot" || item.title === "luxury perfume bottle photoshoot" ? "gray.700" : "gray.700"}
                   >
                     The Brief
                   </Heading>
                   <Text
-                    color={item.title === "Luxury Watch Poster" ? "gray.300" : "gray.600"}
+                    color={item.title === "Product photoshoot" || item.title === "luxury perfume bottle photoshoot" ? "gray.600" : "gray.600"}
                   >
                     {item.brief}
                   </Text>
@@ -273,12 +276,12 @@ const PortfolioItem = ({ item }) => {
                   <Heading
                     size="sm"
                     mb={2}
-                    color={item.title === "Luxury Watch Poster" ? "white" : "gray.700"}
+                    color={item.title === "Product photoshoot" || item.title === "luxury perfume bottle photoshoot" ? "gray.700" : "gray.700"}
                   >
                     The Result
                   </Heading>
                   <Text
-                    color={item.title === "Luxury Watch Poster" ? "gray.300" : "gray.600"}
+                    color={item.title === "Product photoshoot" || item.title === "luxury perfume bottle photoshoot" ? "gray.600" : "gray.600"}
                   >
                     {item.result}
                   </Text>
@@ -289,7 +292,7 @@ const PortfolioItem = ({ item }) => {
                     <Heading
                       size="sm"
                       mb={2}
-                      color={item.title === "Luxury Watch Poster" ? "white" : "gray.700"}
+                      color={item.title === "Product photoshoot" || item.title === "luxury perfume bottle photoshoot" ? "gray.700" : "gray.700"}
                     >
                       Features
                     </Heading>
@@ -298,7 +301,7 @@ const PortfolioItem = ({ item }) => {
                         <Text
                           key={index}
                           fontSize="sm"
-                          color={item.title === "Luxury Watch Poster" ? "gray.300" : "gray.600"}
+                          color={item.title === "Product photoshoot" || item.title === "luxury perfume bottle photoshoot" ? "gray.600" : "gray.600"}
                         >
                           • {feature}
                         </Text>
@@ -327,8 +330,8 @@ function Portfolio() {
       title: "Luxury Perfume Campaign",
       category: "Photography",
       type: "image",
-      thumbnail: "/perfume-model.png",
-      media: "/perfume-model.png",
+      thumbnail: "/perfume-model-2.jpg",
+      media: "/perfume-model-2.jpg",
       aspectRatio: 3/4, // Portrait aspect ratio for perfume image
       brief: "Create a high-end product photography series for a luxury perfume brand launching their signature scent.",
       result: "Delivered a set of 10 stunning product images that captured the elegance and exclusivity of the brand, resulting in a 40% increase in pre-launch sign-ups.",
@@ -336,65 +339,65 @@ function Portfolio() {
     },
     {
       id: 2,
-      title: "Luxury Watch Collection",
+      title: "Product photoshoot",
       category: "Photography",
       type: "image",
-      thumbnail: "/watch-model.png",
-      media: "/watch-model.png",
-      aspectRatio: 3/4, // Portrait aspect ratio for watch model image to match perfume image
-      brief: "Develop a sophisticated product photography series for a premium watch brand's new collection launch.",
-      result: "Created an elegant set of images that highlighted the craftsmanship and luxury appeal of the watches, contributing to a 35% increase in online sales.",
-      features: ["Detail macro shots", "Premium styling", "Material highlighting", "Lifestyle context"]
+      thumbnail: "/perfume-bottle.JPG",
+      media: "/perfume-bottle.JPG",
+      aspectRatio: 3/4, // Portrait aspect ratio for product photography
+      brief: "Create stunning product photography for a luxury perfume bottle, highlighting the elegant design and premium quality of the fragrance.",
+      result: "Delivered high-quality product images that showcased the perfume's sophisticated packaging and design, resulting in a 40% increase in online engagement and sales.",
+      features: ["Studio lighting", "Product styling", "Detail focus", "Premium presentation"]
     },
     {
       id: 3,
-      title: "Premium Watch Photography",
+      title: "perfume bottles photoshoot",
       category: "Photography",
       type: "image",
-      thumbnail: "/new-watch.png",
-      media: "/new-watch.png",
-      aspectRatio: 3/4, // Portrait aspect ratio to match perfume image
-      brief: "Create detailed product photography for a luxury watch brand's flagship model, highlighting craftsmanship and design details.",
-      result: "Produced a series of high-quality images that showcased the watch's premium features, contributing to a 45% increase in conversion rate for the featured product.",
-      features: ["Macro photography", "Detail focus", "Material textures", "Professional lighting"]
+      thumbnail: "/perfume-bottles.png",
+      media: "/perfume-bottles.png",
+      aspectRatio: 3/4, // Portrait aspect ratio for product photography
+      brief: "Create stunning product photography for multiple luxury perfume bottles, showcasing the elegant collection and premium quality of the fragrances.",
+      result: "Delivered a comprehensive set of product images that highlighted the perfume collection's sophisticated packaging and design, resulting in a 50% increase in online engagement and collection sales.",
+      features: ["Studio lighting", "Collection styling", "Detail focus", "Premium presentation"]
     },
     {
       id: 4,
-      title: "Lipstick Brand Video Ad",
+      title: "Perfume video Ad",
       category: "Video",
       type: "video",
       thumbnail: "/api/placeholder/600/400", // Not used for direct video playback
-      media: "https://www.youtube.com/embed/a8XQ-TVsUKs",
+      media: "https://www.youtube.com/embed/2B0RlmsIxZY",
       aspectRatio: 9/16, // Using 9:16 for vertical shorts video
-      youtubeId: "a8XQ-TVsUKs", // YouTube video ID
-      brief: "Create a captivating video ad for a premium lipstick brand that showcases the product's vibrant colors and long-lasting formula.",
-      result: "Delivered a visually stunning video that highlighted the product's key features, resulting in a 65% increase in online sales within the first month of the campaign.",
-      features: ["Close-up product shots", "Color transition effects", "Elegant typography", "Emotional storytelling"]
+      youtubeId: "2B0RlmsIxZY", // YouTube video ID
+      brief: "Create a captivating video ad for a luxury perfume brand that showcases the product's elegance and sophisticated fragrance experience.",
+      result: "Delivered a visually stunning video that highlighted the perfume's luxury appeal, resulting in a 70% increase in online sales within the first month of the campaign.",
+      features: ["Cinematic product shots", "Elegant transitions", "Luxury styling", "Emotional storytelling"]
     },
     {
       id: 5,
-      title: "Luxury Watch Poster",
-      category: "Graphics",
+      title: "luxury perfume bottle photoshoot",
+      category: "Photography",
       type: "image",
-      thumbnail: "/watch-poster.png",
-      media: "/watch-poster.png",
-      aspectRatio: 1/1.414, // Standard poster aspect ratio (A4)
-      brief: "Design a sophisticated advertising poster for a luxury watch brand's flagship model, emphasizing elegance and craftsmanship.",
-      result: "Created a visually striking poster that captured the brand's premium positioning, resulting in increased foot traffic to retail locations and a 25% boost in sales for the featured model.",
-      features: ["Typography design", "Color grading", "Layout composition", "Brand integration"]
+      thumbnail: "/luxury-perfume-bottle.png",
+      media: "/luxury-perfume-bottle.png",
+      aspectRatio: 3/4, // Portrait aspect ratio for product photography
+      brief: "Create stunning product photography for a luxury perfume bottle, highlighting the elegant design and premium quality of the fragrance.",
+      result: "Delivered high-quality product images that showcased the perfume's sophisticated packaging and design, resulting in a 40% increase in online engagement and sales.",
+      features: ["Studio lighting", "Product styling", "Detail focus", "Premium presentation"]
     },
     {
       id: 6,
-      title: "Product CGI",
+      title: "3D Product Reveal",
       category: "CGI",
       type: "video",
       thumbnail: "/api/placeholder/600/400",
-      media: "https://www.youtube.com/embed/VVQx0PY-1Wc",
+      media: "https://www.youtube.com/embed/K2A1rzWq_WA",
       aspectRatio: 9/16, // Using 9:16 for vertical shorts video
-      youtubeId: "VVQx0PY-1Wc", // YouTube video ID
-      brief: "Create a photorealistic CGI animation showcasing a product's features and design elements.",
-      result: "Delivered a stunning CGI video that highlighted the product's unique selling points, resulting in a 50% increase in customer engagement and a 30% boost in conversion rates.",
-      features: ["Photorealistic rendering", "Dynamic camera movements", "Lighting effects", "3D modeling"]
+      youtubeId: "K2A1rzWq_WA", // YouTube video ID
+      brief: "Create a captivating 3D product reveal animation that showcases the product's features and design in an engaging way.",
+      result: "Delivered a stunning 3D reveal video that highlighted the product's unique selling points, resulting in a 55% increase in customer engagement and a 35% boost in conversion rates.",
+      features: ["3D animation", "Product reveal effects", "Dynamic transitions", "Professional rendering"]
     }
   ];
 
@@ -404,7 +407,7 @@ function Portfolio() {
     : portfolioItems.filter(item => item.category === activeFilter);
 
   // Filter categories
-  const categories = ['All', 'Photography', 'Video', 'Graphics', 'CGI'];
+  const categories = ['All', 'Photography', 'Video', 'CGI'];
 
   return (
     <Box py={20} bg="gray.50" id="portfolio">
@@ -449,7 +452,7 @@ function Portfolio() {
             mb={8}
           >
             Browse our latest projects and see how we've helped brands across industries
-            achieve their creative goals with our AI-powered solutions.
+            achieve their creative goals.
           </MotionText>
 
           {/* Filter buttons */}

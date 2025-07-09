@@ -70,13 +70,13 @@ function HowWeWork() {
     {
       number: 2,
       title: "Creation",
-      description: "Our AI-powered tools generate multiple creative options based on your requirements and brand guidelines.",
+      description: "Our professional tools generate multiple creative options based on your requirements and brand guidelines.",
       icon: FaMagic
     },
     {
       number: 3,
       title: "Refinement",
-      description: "Our expert team reviews and refines the AI-generated content to ensure it meets our high quality standards.",
+      description: "Our expert team reviews and refines the generated content to ensure it meets our high quality standards.",
       icon: FaCheckCircle
     },
     {
@@ -157,7 +157,7 @@ function HowWeWork() {
             mx="auto"
             px={{ base: 4, md: 0 }}
           >
-            Our streamlined process combines AI efficiency with human expertise to deliver exceptional creative content quickly and consistently.
+            Our streamlined process combines technical efficiency with human expertise to deliver exceptional creative content quickly and consistently.
           </MotionText>
         </MotionFlex>
 

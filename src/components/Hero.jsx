@@ -131,7 +131,7 @@ function Hero() {
                   fontSize="sm"
                   fontWeight="medium"
                 >
-                  <Box as="span">AI-POWERED CREATIVE STUDIO</Box>
+                  <Box as="span">CREATIVE STUDIO</Box>
                 </HStack>
               </MotionBox>
 
@@ -168,7 +168,7 @@ function Hero() {
                 maxW="560px"
                 variants={fadeInUp}
               >
-                Revolutionizing creative production with AI-driven solutions that deliver extraordinary results in record time.
+                Revolutionizing creative production with innovative solutions that deliver extraordinary results in record time.
               </MotionText>
 
               <MotionBox variants={fadeInUp}>
@@ -310,7 +310,7 @@ function Hero() {
                     w="10px"
                     h="10px"
                   />
-                  <Text fontWeight="bold" fontSize="sm">AI-Powered</Text>
+                  <Text fontWeight="bold" fontSize="sm">Professional</Text>
                 </HStack>
               </MotionBox>
             </MotionBox>

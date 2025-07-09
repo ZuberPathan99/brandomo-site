@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Circular Favicon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .circular-preview {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 20px auto;
+            border: 3px solid #FF6B35;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+        }
+        .circular-preview img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .favicon-sizes {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .favicon-size {
+            text-align: center;
+        }
+        .favicon-size div {
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid #FF6B35;
+            margin: 0 auto 10px;
+            background: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .size-16 { width: 16px; height: 16px; }
+        .size-32 { width: 32px; height: 32px; }
+        .size-48 { width: 48px; height: 48px; }
+        .size-16 img, .size-32 img, .size-48 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .instructions {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border-left: 4px solid #FF6B35;
+        }
+        .download-btn {
+            background: linear-gradient(45deg, #FF6B35, #FFB800);
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 10px;
+        }
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center; color: #FF6B35;">Create Circular Favicon</h1>
+        
+        <div class="circular-preview">
+            <img src="/brandomo-logo-new.PNG" alt="Circular Logo Preview" id="logoPreview">
+        </div>
+        
+        <h3>Favicon Size Previews:</h3>
+        <div class="favicon-sizes">
+            <div class="favicon-size">
+                <div class="size-16">
+                    <img src="/brandomo-logo-new.PNG" alt="16x16">
+                </div>
+                <small>16x16</small>
+            </div>
+            <div class="favicon-size">
+                <div class="size-32">
+                    <img src="/brandomo-logo-new.PNG" alt="32x32">
+                </div>
+                <small>32x32</small>
+            </div>
+            <div class="favicon-size">
+                <div class="size-48">
+                    <img src="/brandomo-logo-new.PNG" alt="48x48">
+                </div>
+                <small>48x48</small>
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>📝 Instructions to Create Circular Favicon:</h3>
+            <ol>
+                <li><strong>Right-click</strong> on the large circular preview above</li>
+                <li>Select <strong>"Save image as..."</strong> or <strong>"Copy image"</strong></li>
+                <li>Save it as <strong>"brandomo-logo-circular.png"</strong></li>
+                <li>Upload this file to your <strong>/public</strong> folder</li>
+                <li>Let me know when it's ready, and I'll update the favicon code!</li>
+            </ol>
+            
+            <p><strong>Alternative:</strong> Use any image editor to:</p>
+            <ul>
+                <li>Open <code>brandomo-logo-new.PNG</code></li>
+                <li>Apply a circular mask/crop</li>
+                <li>Make background transparent</li>
+                <li>Save as <code>brandomo-logo-circular.png</code></li>
+            </ul>
+        </div>
+        
+        <div style="text-align: center;">
+            <button class="download-btn" onclick="downloadCircularLogo()">
+                📥 Download Circular Version
+            </button>
+        </div>
+    </div>
+
+    <script>
+        function downloadCircularLogo() {
+            // Create a canvas to generate circular version
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            const img = document.getElementById('logoPreview');
+            
+            // Set canvas size
+            canvas.width = 512;
+            canvas.height = 512;
+            
+            // Create circular clipping path
+            ctx.beginPath();
+            ctx.arc(256, 256, 256, 0, 2 * Math.PI);
+            ctx.clip();
+            
+            // Draw the image
+            ctx.drawImage(img, 0, 0, 512, 512);
+            
+            // Download the result
+            canvas.toBlob(function(blob) {
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'brandomo-logo-circular.png';
+                a.click();
+                URL.revokeObjectURL(url);
+            });
+        }
+    </script>
+</body>
+</html>

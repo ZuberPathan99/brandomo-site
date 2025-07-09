@@ -45,7 +45,7 @@ function Testimonials() {
     {
       name: "Sarah Johnson",
       position: "Marketing Director, Chronoelite",
-      quote: "Brandomo transformed our product imagery in just 24 hours. The AI-powered results were beyond our expectations and helped increase our conversion rate by 35%.",
+      quote: "Brandomo transformed our product imagery in just 24 hours. The professional results were beyond our expectations and helped increase our conversion rate by 35%.",
       avatarSrc: "/api/placeholder/80/80"
     },
     {

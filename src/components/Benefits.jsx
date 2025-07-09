@@ -18,8 +18,8 @@ function Benefits() {
       description: "Get polished visuals in as little as 1-2 business days, not weeks."
     },
     {
-      title: "Zero AI Expertise Needed",
-      description: "We handle all the AI work under the hood."
+      title: "Zero Technical Expertise Needed",
+      description: "We handle all the technical work under the hood."
     },
     {
       title: "Human-Perfected Quality",

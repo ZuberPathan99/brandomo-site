@@ -69,8 +69,8 @@ function Process() {
 
           <Box position="relative">
             <ProcessStep
-              title="AI Generation & Editing"
-              description="Our AI generates initial content, which our experts then refine and perfect."
+              title="Content Creation & Editing"
+              description="Our team creates initial content, which our experts then refine and perfect."
               icon={FaMagic}
               number="2"
             />

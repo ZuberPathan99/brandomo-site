@@ -9,8 +9,7 @@ import {
   Flex,
   Link,
   IconButton,
-  Heading,
-  Image
+  Heading
 } from '@chakra-ui/react';
 import {
   FaTwitter,
@@ -36,16 +35,10 @@ function Footer() {
           <Stack spacing={6}>
             <Box>
               <Flex align="center" mb={2}>
-                <Image
-                  src="/brandomo-logo.png"
-                  alt="Brandomo Logo"
-                  height="25px"
-                  mr={2}
-                />
                 <Heading size="md">Brandomo</Heading>
               </Flex>
               <Text fontSize="sm" mt={4}>
-                Revolutionizing creative content production with AI-driven solutions that deliver exceptional results faster and more affordably than traditional methods.
+                Revolutionizing creative content production with solutions that deliver exceptional results faster and more affordably than traditional methods.
               </Text>
             </Box>
           </Stack>

@@ -10,8 +10,7 @@ import {
   IconButton,
   Stack,
   Collapse,
-  useDisclosure,
-  Image
+  useDisclosure
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 
@@ -44,12 +43,6 @@ function Header() {
       >
         <Flex flex={{ base: 1 }} justify={{ base: 'start', md: 'start' }}>
           <Flex align="center">
-            <Image
-              src="/brandomo-logo.png"
-              alt="Brandomo Logo"
-              height="30px"
-              mr={2}
-            />
             <Text
               fontFamily={'heading'}
               fontWeight="bold"

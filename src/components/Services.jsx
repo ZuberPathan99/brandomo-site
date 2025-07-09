@@ -102,7 +102,7 @@ function Services() {
   const services = [
     {
       title: "Product Photography",
-      description: "Stunning AI-generated product photos that highlight every detail, perfect for e-commerce and marketing.",
+      description: "Stunning professional product photos that highlight every detail, perfect for e-commerce and marketing.",
       icon: FaCamera,
       color: "blue",
       imageSrc: "/api/placeholder/400/300"
@@ -123,7 +123,7 @@ function Services() {
     },
     {
       title: "Voiceovers & Audio",
-      description: "Professional audio production with AI-generated voices in multiple languages and styles.",
+      description: "Professional audio production with high-quality voices in multiple languages and styles.",
       icon: FaMicrophone,
       color: "purple",
       imageSrc: "/api/placeholder/400/300"
@@ -210,7 +210,7 @@ function Services() {
             maxW="container.md"
             mx="auto"
           >
-            Discover our comprehensive suite of AI-powered creative services designed to elevate your brand
+            Discover our comprehensive suite of professional creative services designed to elevate your brand
             and captivate your audience across all digital platforms.
           </MotionText>
         </MotionFlex>
